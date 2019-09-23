@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
     public void handleExplicitIntent(View view) {
         Intent intent =  new Intent(this, ExplicitIntentActivity.class);
         startActivity(intent);
@@ -23,8 +24,18 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void handleImplicitIntent(View view) {
+    public void implisit(View view) {
         Intent intent = new Intent(this, ImplicitIntentActivity.class);
+        startActivity(intent);
+    }
+
+    public void bundleClick(View view) {
+        Intent intent = new Intent(this, BundleActivity.class);
+        startActivity(intent);
+    }
+
+    public void parcelClick(View view) {
+        Intent intent = new Intent(this, ParcelableActivity.class);
         startActivity(intent);
     }
 }
